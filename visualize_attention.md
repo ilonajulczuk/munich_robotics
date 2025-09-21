@@ -6,7 +6,7 @@ Clone the github repo, checkout the branch with a local fix (to load the local d
 
 
 ```bash
-git pull https://github.com/ilonajulczuk/physical-AI-interpretability.git
+git clone https://github.com/ilonajulczuk/physical-AI-interpretability.git && cd physical-AI-interpretability
 git checkout visualize_attention
 pip install -e .
 ```
@@ -17,8 +17,8 @@ Example command to run the attention
 
 export EPISODE_NUM=29
 
-python examples/visualise_original_data_attention.py --dataset-repo-id lerobot/svla_so101_pickplace --episode-id $EPISODE_NUM --policy-path /home/jovyan/hackathon-example-policies/notebooks/outputs/train/2025-09-19/21-34-15_act --output-dir ./output/attention_analysis_results
-```
+python examples/visualise_original_data_attention.py --dataset-repo-id lerobot/svla_so101_pickplace --episode-id $EPISODE_NUM --dataset-dir /home/jovyan/my_dataset --policy-path /home/jovyan/hackathon-example-policies/notebooks/outputs/train/2025-09-19/21-34-15_act/checkpoints/0xxxx/pretrained_model/ --output-dir ./output/attention_analysis_results
+```     `   
 
 
 ## Troubleshooting
